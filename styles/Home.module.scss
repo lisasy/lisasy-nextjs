@@ -1,0 +1,230 @@
+$breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
+
+@mixin breakpointSet($breakpoints) {
+  @media (min-width: theme('screens.' + #{$breakpoints})) {
+    @content;
+  }
+}
+
+.siteContainer {
+  //max-width: 1280px;
+  @apply container;
+  @apply mx-auto;
+  @apply px-8;
+  margin: 0 auto;
+
+  @include breakpointSet('sm') {
+    padding: 0;
+  }
+}
+
+.contentContainer {
+  margin: 0 auto;
+}
+
+.heroContainer {
+  position: relative;
+  height: 50vh;
+  margin-bottom: 40px;
+
+  @include breakpointSet('lg') {
+    height: 600px;
+    margin-bottom: 120px;
+  }
+}
+
+.heroText {
+  @apply text-3xl;
+    position: absolute;
+    bottom: 0;
+
+  @include breakpointSet('md') {
+    @apply text-5xl;
+  }
+
+  @include breakpointSet('lg') {
+    @apply text-7xl;
+    line-height: 1.15;
+  }
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  @include breakpointSet('md') {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    margin-bottom: 120px;
+  } 
+}
+
+.sectionTitle {
+  font-weight: 800;
+  @apply mb-4;
+  @apply text-xl;
+
+  @include breakpointSet('md') {
+    @apply text-2xl;
+  }
+}
+
+.sectionContainerWide {
+  display: block;
+  margin-bottom: 120px;
+
+  .sectionTitle {
+    @apply mb-4;
+
+    @include breakpointSet('md') {
+      @apply mb-10;
+    }
+  }
+}
+
+
+
+.roleList {
+  $list: 1 2 3;
+
+  @each $i in $list {
+    li:nth-child(#{$i+1}) {
+      margin-left: (40px*$i);
+
+      @include breakpointSet('md') {
+        margin-left: (80px*$i);
+      }
+    }
+  }
+
+  li {
+    @apply mb-6;
+
+    @include breakpointSet('md') {
+      @apply mb-10;
+    }
+
+    @include breakpointSet('xl') {
+      @apply mb-16;
+    }
+  }
+}
+
+.roleTitle,
+.roleSubtitle {
+  @apply text-xl;
+
+  @include breakpointSet('md') {
+    @apply text-2xl;
+  }
+
+  @include breakpointSet('xl') {
+    @apply text-3xl;
+  }
+}
+
+.roleTitle {
+  font-weight: 800;
+  font-family: var(--base-font-family);
+}
+
+.roleSubtitle
+ {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.selectedList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include breakpointSet('md') {
+    gap: 64px;
+  }
+
+  @include breakpointSet('md') {
+    gap: 120px;
+  }
+}
+
+.selectedImage {
+  border-radius: 64px;
+}
+
+.blogList {
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include breakpointSet('md') {
+    margin-top: -20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.blogRowItem a {
+  @apply text-xl;
+  padding: 12px 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include breakpointSet('md') {
+    @apply text-2xl;
+    padding: 20px;
+  }
+
+  &:hover {
+    background-color: #E2B799;
+    text-decoration: none;
+  }
+
+  .blogTitle {
+    font-weight: 700;
+  }
+
+  .blogDate {
+    flex: none;
+  }
+}
+
+.footerEmail {
+  font-family: var(--display-font-family);
+  @apply text-3xl;
+
+  @include breakpointSet('md') {
+    @apply text-5xl;
+  }
+
+  @include breakpointSet('lg')  {
+    margin-bottom: 12px;
+    @apply text-7xl;
+  }
+}
+
+.footerList {
+  display: flex;
+  gap: 24px;
+
+  a {
+    @apply text-xl;
+
+    @include breakpointSet('md') {
+      @apply text-2xl;
+    }
+  }
+}

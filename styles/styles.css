@@ -1,0 +1,80 @@
+:root {
+    --purpleHeart:#4438ac; 
+    --desertSand:#e8bfa3; 
+    --body-color: #4438ac;
+    --bg-color: #e8bfa3;
+    --display-font-family: 'Unbounded', cursive;
+    --base-font-family: 'DM Sans', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1em; /*16px*/
+    color: var(--body-color);
+    background-color: var(--bg-color);
+    font-family: var(--base-font-family);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--display-font-family);
+}
+
+p {
+    @apply pb-6;
+}
+
+a {
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+li a:hover{
+    cursor: pointer;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: top;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 12px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    font-family: var(--display-font-family);
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+.heroText {
+    font-size: 3.5em;
+    line-height: 118%;
+}
