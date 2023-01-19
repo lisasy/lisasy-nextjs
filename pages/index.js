@@ -36,7 +36,7 @@ export default function Home() {
             </li>
             <li>
               <h4 className={styles.roleTitle}>Founder & Designer</h4>
-              <span className={styles.roleSubtitle}><a href="https://www.daybreaksupply.co/" target="_blank">Daybreak Supply Co.</a></span>
+              <span className={styles.roleSubtitle}><a href="https://www.daybreaksupply.co/" target="_blank" rel="noreferrer">Daybreak Supply Co.</a></span>
             </li>
             <li>
               <h4 className={styles.roleTitle}>Illustrator & Writer</h4>
