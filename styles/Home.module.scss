@@ -78,12 +78,10 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
     @apply mb-4;
 
     @include breakpointSet('md') {
-      @apply mb-10;
+      @apply mb-16;
     }
   }
 }
-
-
 
 .roleList {
   $list: 1 2 3;
@@ -138,14 +136,63 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 .selectedList {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 64px;
 
   @include breakpointSet('md') {
-    gap: 64px;
+    gap: 96px;
   }
 
-  @include breakpointSet('md') {
+  @include breakpointSet('xl') {
     gap: 120px;
+  }
+
+  article {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+
+    @include breakpointSet('md') {
+      grid-template-columns: 70ch auto;
+    }
+
+    h4, 
+    .itemDescription,
+    .itemDate {
+      @apply text-xl;
+
+      @include breakpointSet('md') {
+        @apply text-2xl;
+      }
+    }
+
+    .itemDescription,
+    .itemDate {
+      opacity: 0.8;
+    }
+
+    h4 {
+      grid-column-start: 1;
+      font-family: var(--base-font-family);
+      font-weight: 800;
+      @apply pb-2;
+    }
+
+    .itemDescription {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 2;
+
+      @include breakpointSet('md') {
+        grid-column-end: span 1;
+      }
+    }
+
+    .itemDate {
+      grid-column-start: 2;
+      text-align: right;
+      grid-row-start: 1;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -217,6 +264,7 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 }
 
 .footerList {
+  @apply mb-8;
   display: flex;
   gap: 24px;
 
@@ -225,6 +273,21 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 
     @include breakpointSet('md') {
       @apply text-2xl;
+    }
+  }
+}
+
+.footerCredits {
+  > p {
+    padding-bottom: 0;
+
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.05);
     }
   }
 }
