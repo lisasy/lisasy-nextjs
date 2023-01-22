@@ -68,7 +68,7 @@ export default function Home() {
                 <article>
                   <h4>Move</h4>
                   <p className={styles.itemDescription}>
-                    At Meta's NPE, I brought to market Move, an social
+                    At Meta&apos;s NPE, I brought to market Move, an social
                     productivity app for empower community organizers and
                     everyone alike to create tasks and stay organized.
                   </p>
@@ -98,7 +98,10 @@ export default function Home() {
                     Facebook Live Reporting Experience
                   </h4>
                   <p className={styles.itemDescription}>
-                    I led design to release Live Video reporting from 0 to full release in 1 month. I coordinated with cross-functional partners in product, engineering, legal, and communications, across our Menlo Park and London timezones. Launched on Android, iOS, and web.
+                    I led design on a cross-functional team of many stakeholders
+                    to release Live Video reporting in one month. I coordinated
+                    fast execution across Menlo Park and London teams to launch
+                    this on Android, iOS, and web.
                   </p>
                   <p className={styles.itemDate}>
                     2021
@@ -110,7 +113,11 @@ export default function Home() {
                 <article>
                   <h4>Tall Poppy</h4>
                   <p className={styles.itemDescription}>
-                    I supported Tall Poppy in revamping their product to help people proactively protect their online security and safety. I led research and design to improve new user onboarding and help people track the progress on actions they take to safeguard themselves.
+                    I led design and research to revamp Tall Poppy and improve
+                    how to help people proactively protect their online security
+                    and safety. This included creating a new user onboarding
+                    flow and updating the dashboard to help people track the
+                    progress on actions they take to safeguard themselves.
                   </p>
                   <p className={styles.itemDate}>
                     2019
