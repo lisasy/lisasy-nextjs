@@ -1,8 +1,8 @@
 :root {
     --purpleHeart:#4438ac; 
     --desertSand:#e8bfa3; 
-    --body-color: #4438ac;
-    --bg-color: #e8bfa3;
+    --body-color: #fff;
+    --bg-color: #161F1F;
     --display-font-family: 'Unbounded', cursive;
     --base-font-family: 'DM Sans', sans-serif;
 }

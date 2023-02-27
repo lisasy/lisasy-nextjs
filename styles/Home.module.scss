@@ -7,7 +7,6 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 }
 
 .siteContainer {
-  //max-width: 1280px;
   @apply container;
   @apply mx-auto;
   @apply px-8;
@@ -123,13 +122,13 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 }
 
 .roleTitle {
-  font-weight: 800;
+  font-weight: 400;
   font-family: var(--base-font-family);
 }
 
 .roleSubtitle
  {
-  opacity: 0.8;
+  opacity: 0.45;
   font-weight: 400;
 }
 
@@ -163,17 +162,21 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
       @include breakpointSet('md') {
         @apply text-2xl;
       }
+    
+      @include breakpointSet('xl') {
+        @apply text-3xl;
+      }
+
     }
 
     .itemDescription,
     .itemDate {
-      opacity: 0.8;
+      opacity: 0.45;
     }
 
     h4 {
       grid-column-start: 1;
       font-family: var(--base-font-family);
-      font-weight: 800;
       @apply pb-2;
     }
 
@@ -280,7 +283,7 @@ $breakpoints: 'sm', 'md', 'lg', 'xl', '2xl';
 .footerCredits {
   > p {
     padding-bottom: 0;
-
+    opacity: 0.45;
   }
 
   a {

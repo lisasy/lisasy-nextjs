@@ -98,7 +98,7 @@ export default function Home() {
                     Facebook Live Reporting Experience
                   </h4>
                   <p className={styles.itemDescription}>
-                    I led design on a cross-functional team of many stakeholders
+                    I led design on a cross-functional team
                     to release Live Video reporting in one month. I coordinated
                     fast execution across Menlo Park and London teams to launch
                     this on Android, iOS, and web.
@@ -115,9 +115,7 @@ export default function Home() {
                   <p className={styles.itemDescription}>
                     I led design and research to revamp Tall Poppy and improve
                     how to help people proactively protect their online security
-                    and safety. This included creating a new user onboarding
-                    flow and updating the dashboard to help people track the
-                    progress on actions they take to safeguard themselves.
+                    and safety.
                   </p>
                   <p className={styles.itemDate}>
                     2019
@@ -129,30 +127,29 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
-      
-      {/* Refactor into Footer.module.css */}
-      <footer className={styles.sectionContainerWide}>
+      <footer className={styles.sectionContainer}>
         <h3 className={styles.sectionTitle}>
             Elsewhere
         </h3>
-        <div className="md:mb-4">
-          <a className={styles.footerEmail} href="" mailto="hello@lisasy.com">hello@lisasy.com</a>
-        </div>
-        <ul className={styles.footerList}>
-          <li><a href="https://www.instagram.com/lisasyart" target="_blank" rel="noreferrer">Instagram</a></li>
-          <li><a href="https://read.cv/lisasy" target="_blank" rel="noreferrer">Read.cv</a></li>
-          <li><a href="https://twitter.com/lisasy" target="_blank" rel="noreferrer">Twitter</a></li>
-        </ul>
-        <div className={styles.footerCredits}>
-          <p>
-            Made with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> and <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>. View my <a href="https://github.com/lisasy/lisasy-nextjs" target="_blank" rel="noreferrer">source code on Github</a>.
-          </p>
-          <p>
-            Typeface: Unbounded and DM Sans on Google Fonts.
-          </p>
+        <div>
+          <div className="md:mb-4">
+            <a className={styles.footerEmail} href="" mailto="hello@lisasy.com">hello@lisasy.com</a>
+          </div>
+          <ul className={styles.footerList}>
+            <li><a href="https://www.instagram.com/lisasyart" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="https://read.cv/lisasy" target="_blank" rel="noreferrer">Read.cv</a></li>
+            <li><a href="https://twitter.com/lisasy" target="_blank" rel="noreferrer">Twitter</a></li>
+          </ul>
+          <div className={styles.footerCredits}>
+            <p>
+              Made with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> and <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>. View my <a href="https://github.com/lisasy/lisasy-nextjs" target="_blank" rel="noreferrer">source code on Github</a>.
+            </p>
+            <p>
+              Typeface: Unbounded and DM Sans on Google Fonts.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
